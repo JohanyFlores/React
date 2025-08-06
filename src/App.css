@@ -1,59 +1,57 @@
-/* --- Estilos Globales --- */
-/* Afectan a toda la página */
+/* src/App.css */
+
 body {
-  margin: 0;
-  padding: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f0f2f5; /* Un fondo gris claro */
-  color: #1c1e21;
+  margin: 0; /* Elimina márgenes extra del navegador */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
 }
 
-/* --- Maquetación de la App --- */
-/* Define el contenedor principal */
-
-    .App {
-      max-width: 1200px; /* Le da un ancho máximo al contenido */
-      margin-left: auto;  /* Centra el bloque horizontalmente */
-      margin-right: auto; /* Centra el bloque horizontalmente */
-      padding: 20px;       /* Añade un poco de espacio en los bordes */
-    }
+/* --- REGLA CLAVE Y DEFINITIVA --- */
+.App {
+  /* 1. Centra el bloque principal de la aplicación en la página */
+  max-width: 1200px;
+  margin: 0 auto;
   
+  /* 2. Usa Flexbox para centrar el contenido DENTRO de este bloque */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 40px 20px; /* Añade un poco de espacio general */
+}
 
 .App header {
+  width: 100%; /* Asegura que el header ocupe el ancho */
   text-align: center;
-  margin-bottom: 40px; /* Espacio debajo del título */
+  margin-bottom: 40px;
   color: #0d1a4d;
 }
 
-/* --- Contenedor de la Cuadrícula (Grid) --- */
-/* Esta es la regla más importante aquí. Crea el layout de las tarjetas. */
-
 .spells-container {
-  display: flex; /* Activa el layout de Flexbox */
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  gap: 20px; /* Mantiene el espacio entre las tarjetas */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
+
 .detail-view {
   display: flex;
-  flex-direction: column; /* <-- ESTA LÍNEA ES LA SOLUCIÓN */
-  align-items: center;   /* Esto centrará los elementos horizontalmente */
-  gap: 20px;             /* Esto añade espacio entre la tarjeta y el botón */
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .back-button {
-  /* Tus otros estilos (color, padding, etc.) se quedan igual */
   background-color: #6c757d;
   color: white;
   border: none;
   border-radius: 6px;
   padding: 10px 20px;
-  /* --- AÑADE ESTAS LÍNEAS PARA CENTRAR EL BOTÓN --- */
-  display: block; /* Le decimos que ocupe su propia línea */
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
-
 
 .back-button:hover {
   background-color: #5a6268;
