@@ -1,0 +1,29 @@
+.element {
+    background-color: #f9f9f9; /* Un fondo gris muy claro */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Esquinas más redondeadas */
+    box-shadow: 3px 3px 8px #ddd; /* Sombra más pronunciada */
+    padding: 16px;
+    width: 320px; /* Ancho fijo para simular una carta */
+    margin-bottom: 20px; /* Espacio entre cartas si tienes varias */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto dentro de la carta */
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  
+  .icon {
+    width: 80px; /* Icono más grande */
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .spellName {
+    font-size: 1.5em; /* Nombre más grande */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Color de texto más oscuro */
+  }
