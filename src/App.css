@@ -1,40 +1,40 @@
 /* src/App.css */
 
 body {
-  margin: 0; /* Elimina márgenes extra del navegador */
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: #f0f2f5;
 }
 
-/* --- REGLA CLAVE Y DEFINITIVA --- */
 .App {
-  /* 1. Centra el bloque principal de la aplicación en la página */
-  max-width: 1200px;
-  margin: 0 auto;
-  
-  /* 2. Usa Flexbox para centrar el contenido DENTRO de este bloque */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  padding: 40px 20px; /* Añade un poco de espacio general */
+  /* Le damos una altura para que el centrado funcione */
+  min-height: 100vh;
 }
 
 .App header {
-  width: 100%; /* Asegura que el header ocupe el ancho */
   text-align: center;
-  margin-bottom: 40px;
+  padding: 40px 20px;
   color: #0d1a4d;
 }
 
+/* --- Contenedor de la Lista --- */
 .spells-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding: 0 20px;
 }
 
+/* --- Contenedor de la Vista de Detalle --- */
 .detail-view {
+  /* Esta técnica saca el elemento del flujo normal para centrarlo */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Y estas reglas organizan la tarjeta y el botón adentro */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,9 +50,4 @@ body {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.back-button:hover {
-  background-color: #5a6268;
 }

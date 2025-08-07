@@ -21,10 +21,12 @@ function App() {
 
   return (
     <div className="App">
+     {!selectedSpell && (
       <header>
-        <h1>{selectedSpell ? selectedSpell.name : 'Libro de Hechizos'}</h1>
+        <h1>Libro de Hechizos</h1>
       </header>
-      
+    )}
+            
       <main>
         {selectedSpell ? (
           <div className="detail-view">
