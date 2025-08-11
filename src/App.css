@@ -1,4 +1,3 @@
-/* src/App.css */
 
 body {
   margin: 0;
@@ -7,7 +6,6 @@ body {
 }
 
 .App {
-  /* Le damos una altura para que el centrado funcione */
   min-height: 100vh;
 }
 
@@ -17,7 +15,6 @@ body {
   color: #0d1a4d;
 }
 
-/* --- Contenedor de la Lista --- */
 .spells-container {
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +23,6 @@ body {
   padding: 0 20px;
 }
 
-/* --- Contenedor de la Vista de Detalle --- */
 .detail-view {
   /* Esta técnica saca el elemento del flujo normal para centrarlo */
   position: absolute;
@@ -34,7 +30,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   
-  /* Y estas reglas organizan la tarjeta y el botón adentro */
   display: flex;
   flex-direction: column;
   align-items: center;
